@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- button 태그 -->
+  <input type="submit" value="등록">
+  <input type="reset" value="취소">
+  <button type="submit">
+    <img src="/images/multimedia/facebook.png" alt="페이스북">
+    페이스북에 등록
+  </button>
+    <input type="text" disabled>
+    <button type="button" disabled>비활성</button>
+      <input type="text" readonly>
+      <textarea readonly></textarea>
+      <input type="url" maxlength="4">
+      <textarea maxlength="4"></textarea>
+      <form action="#">
+        <fieldset>
+          <legend>좋아하는 과일</legend>
+          <input type="checkbox" id="banana" name="banana" value="banana">
+          <label for="banana">banana</label><br>
+          <input type="checkbox" id="apple" name="apple" value="apple">
+          <label for="apple">apple</label><br>
+          <input type="checkbox" id="orange" name="orange" value="orange"  checked>
+          <label for="orange">orange</label><br>
+        </fieldset>
+      </form>
+      <input type="text" placeholder="반드시 입력" required autofocus>
+      
+</body>
+</html>
