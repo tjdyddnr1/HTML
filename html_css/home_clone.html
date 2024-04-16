@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+        }
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        body::-webkit-scrollbar-thumb {
+            background: #c1c1c1; /* 스크롤바의 색상 */
+            background-clip: padding-box;
+            border: 3px solid transparent;
+        }
+
+        body::-webkit-scrollbar-track {
+        background: #ffff;  /*스크롤바 뒷 배경 색상*/
+        }
+        .head {
+            background-color: red;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
+        }
+        .logo_box {
+            background-color: bisque;
+            width: 17%;
+        }
+        .logo {
+            padding: 13px 0 13px 50px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            width: 70%;
+        }
+        ol {
+            display: flex;
+            justify-content: center;
+        }
+        ul {
+            display: block;
+        }
+        li {
+            list-style-type: none;
+            margin: 5px 47px 0 0;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        li:hover {
+            color: plum;
+        }
+        li::after {
+             position: absolute; 
+             content:""; 
+             display: block;
+             border-bottom: 1px solid plum;
+             transition: 250ms ease-in-out;
+               left: auto;
+                right: 0;  
+                width: 0;
+                height: 2px;
+            }
+        li:hover::after {
+            position: relative;
+            width: 100%;
+            left: 0;
+        }
+        .stellive {
+            width: 157px;
+            height: auto;
+        }
+        .body {
+            width: 100%;
+            height: 500px;
+            background-color: blue;
+        }
+        .slider {
+            width: 100%; /* 원하는 슬라이드의 최대 너비 설정 */
+            overflow: hidden; /* 슬라이드 밖의 내용 숨기기 */
+            position: relative; /* 상대적 위치 */
+        }
+        .slides {
+            display: flex; /* 슬라이드를 가로로 나열 */
+            animation: slide-animation 20s infinite; /* 애니메이션 적용, 무한 반복 */
+        }
+        .slide {
+            flex: 0 0 100%; /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */ 
+            transition: transform 1s ease; /* 부드러운 변환 효과 */
+            display: flex; /* flexbox 사용 */
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
+            height: 770px; /* 슬라이드의 높이 */
+            background-color: #ccc; /* 배경 색상 */
+            color: white; /* 글자 색상 */
+        }
+        /* 애니메이션 효과 */
+        @keyframes slide-animation {
+            0%, 20% { transform: translateX(0); } /* 0초부터 4초까지 첫 번째 이미지 */
+            25%, 45% { transform: translateX(-100%); } /* 5초부터 9초까지 두 번째 이미지 */
+            50%, 70% { transform: translateX(-200%); } /* 10초부터 14초까지 세 번째 이미지 */
+            75%, 95% { transform: translateX(-300%); } /* 15초부터 19초까지 네 번째 이미지 */
+            100% { transform: translateX(0); } /* 20초에 다시 첫 번째 이미지로 리셋 */
+        }
+        .shirt {
+            width: 100%;
+            height: 100%;
+
+        }
+        .leg {
+            width: 100%;
+            height: 1730px;
+            background-image: url(/images/메인배경.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .ground {
+            width: 1280px;
+            height: 1730px;
+            padding: 0 15px;
+            margin: 0 310px 130px;
+            background-color: brown;
+            position: relative;
+        }
+        .star {
+            margin-bottom: 20px;
+        }
+        .news { 
+            margin-bottom: 15px;
+        }
+        .hamstring {
+            width: 1280px;
+            height: 650px;
+            margin: 0 0 100px 0;
+        }
+        .title {
+            position: absolute;
+            width: 100%;
+            height: 1555px;
+            padding: 30px 0 0 0;
+            left: 50%;
+            transform: translate(-50%);
+            background-color :aquamarine;
+            text-align: center;
+        }
+        .newsbox {
+            width: 100%;
+            height: 380px;
+            background: red;
+            display: flex;
+            justify-content: center;
+        }
+        .mainnews1, .mainnews2, .mainnews3 {
+            width: 400px;
+            height: 350px;
+            background-color: white;
+            position: relative;
+        }
+        .mainnews1 {
+            margin-right: 35px;
+        }
+        .mainnews2 {
+            margin: 0 35px;
+        }
+        .mainnews3 {
+            margin-left: 35px;
+        }
+        .clip {
+            width: 11px;
+            height: 11px;
+            background-color: #D7D7EC;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+            position: absolute;
+            right: 4px;
+            bottom: 4px;
+            }
+        footer {
+            width: 100%;
+            height: 507px;
+            background-image: url(/images/메인발바닥.png);
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="logo_box">
+            <div class="logo">
+                <img class="stellive" src="/images/스텔라이브로고.png">
+            </div>
+        </div>
+        <div class="menu">
+        <div>
+        </nav>
+            <ol>
+                <ul>
+                <li>ABOUT</li>
+             </ul>
+                <li>NEWS</li>
+                <li>TALENTS</li>
+                <li>MUSIC</li>
+                <li>GOODS</li>
+                <li>GUIDELINE</li>
+                <li>CONTACT</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="slider">
+            <div class="slides">
+            <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/61d6fa48d97b5bf29d1582b76ad1def4.png"></div>
+            <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/99b983892094b5c6d2fc3736e15da7d1.png"></div>
+            <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/f4b004068017e76aae896674b8eeb370.png"></div>
+            <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/527e52323f5f81909c256c261bcc66a0.png"></div>
+            </div>
+            </div>
+            <div class="leg">
+                <div class="ground">
+                    <div class="title">
+                        <div class="hamstring">
+                            <div class="star">
+                                <img src="/images/메인별.png"> </div>
+                                <div class="news">
+                                    <img src="/images/메인news.png"></div>
+                                <div class="lettering">
+                                    <img src="images/stellive.png"></div>
+                            <div class="newsbox">
+                            <div class="mainnews1"> <div class="clip"></div>
+                            </div>
+                            <div class="mainnews2"> <div class="clip"></div>
+                            </div>
+                            <div class="mainnews3"> <div class="clip"></div>
+                            </div>
+                        </div>
+                            <div>
+                                <button type="button"><img src="/images/more.png"><span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+            </footer>
+    </div>
+</body>
+</html>
