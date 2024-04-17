@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         * {
             box-sizing: border-box;
         }
@@ -27,7 +28,7 @@
         }
         .head {
             background-color: red;
-            height: 60px;
+            height: 85px;
             display: flex;
             justify-content: center;
             box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
@@ -45,7 +46,13 @@
             background-color: aqua;
             width: 70%;
         }
+        .menu-bar {
+            width: 100%;
+            height: 85px;
+            position: relative;
+        }
         ol {
+            margin: 0;
             display: flex;
             justify-content: center;
         }
@@ -53,9 +60,13 @@
             display: block;
         }
         li {
+            color: #424242;
+            font-weight: bold;
             list-style-type: none;
-            margin: 5px 47px 0 0;
-            font-size: 12px;
+            margin-right: 60px;
+            padding: 33px 0 34px 0;
+            font-size: 17px;
+            font-family: "Montserrat", sans-serif;
             display: inline-block;
             position: relative;
         }
@@ -66,7 +77,7 @@
              position: absolute; 
              content:""; 
              display: block;
-             border-bottom: 1px solid plum;
+             border-bottom: 2px solid plum;
              transition: 250ms ease-in-out;
                left: auto;
                 right: 0;  
@@ -117,7 +128,7 @@
         .shirt {
             width: 100%;
             height: 100%;
-
+            position: relative;
         }
         .leg {
             width: 100%;
@@ -139,6 +150,9 @@
         }
         .news { 
             margin-bottom: 15px;
+        }
+        .lettering {
+            margin-bottom: 50px;
         }
         .hamstring {
             width: 1280px;
@@ -168,8 +182,28 @@
             background-color: white;
             position: relative;
         }
+        .mainnews1:hover, .mainnews2:hover, .mainnews3:hover {
+            .newsbanner{
+                transform : scale(1.1);
+            }
+        }
         .mainnews1 {
             margin-right: 35px;
+        }
+        .newsbannerbox {
+            padding-left: 6px;
+            width: 368px;
+            height: 213px;
+            overflow: hidden;
+        }
+        .newsbanner {
+            padding-top: 6px;
+        }
+        .newstext {
+            width: 319px;
+            height: 137px;
+            padding: 37px 15px 40px 15px;
+            font-size: 1.31rem;
         }
         .mainnews2 {
             margin: 0 35px;
@@ -201,18 +235,16 @@
             </div>
         </div>
         <div class="menu">
-        <div>
+        <div class="menu-bar">
         </nav>
             <ol>
-                <ul>
-                <li>ABOUT</li>
-             </ul>
-                <li>NEWS</li>
-                <li>TALENTS</li>
-                <li>MUSIC</li>
-                <li>GOODS</li>
-                <li>GUIDELINE</li>
-                <li>CONTACT</li>
+                <li><span>ABOUT</span></li>
+                <li><span>NEWS</span></li>
+                <li><span>TALENTS</span></li>
+                <li><span>MUSIC</span></li>
+                <li><span>GOODS</span></li>
+                <li><span>GUIDELINE</span></li>
+                <li><span>CONTACT</span></li>
             </ol>
             </nav>
         </div>
@@ -238,11 +270,20 @@
                                 <div class="lettering">
                                     <img src="images/stellive.png"></div>
                             <div class="newsbox">
-                            <div class="mainnews1"> <div class="clip"></div>
+
+                            <div class="mainnews1">
+                                <div class="newsbannerbox">
+                                <img class="newsbanner" src="/images/myFairy.jpg"></div> <div class="newstext">STELLIVE MUSIC PROJECT 003</div>
+                                <div class="clip"> </div></div>
+
+                            <div class="mainnews2">
+                                <div class="newsbannerbox">
+                                <img src="/images/newshina.jpg"class= "newsbanner"></div> <div class="newstext">시라유키 히나, 네네코 마시로 신의상 공개 시간 변경 안내</div>
+                                <div class="clip"></div>
                             </div>
-                            <div class="mainnews2"> <div class="clip"></div>
-                            </div>
-                            <div class="mainnews3"> <div class="clip"></div>
+                            <div class="mainnews3"><div class="newsbannerbox">
+                                <img src="/images/newstabi.jpg"class="newsbanner"></div> <div class="newstext">Stellive Univers 신의상 공개!</div>
+                                <div class="clip"></div>
                             </div>
                         </div>
                             <div>
