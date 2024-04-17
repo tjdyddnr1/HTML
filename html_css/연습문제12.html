@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  .container {
+    width: 304px;
+    height: 390px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    box-sizing: border-box;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 228px;
+    height: 44px;
+    border: solid 2px black;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: #504444;
+    font-family:"Roboto", sans-serif;
+  }
+  .or {
+    font-size: 16px;
+    font-weight: bold;
+    color: #504444;
+    margin: 28px 0;
+    font-family:"Roboto", sans-serif;
+  }
+  .id, .password {
+    width: 228px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+  .userid, .userpassword {
+    border-width: 0;
+    color: gray;
+    background-color: #eaeaea;
+  }
+  .button {
+    width: 228px;
+    height: 44px;
+    background-color: #373f3c;
+    color: white;
+    border-width: 0;
+    margin-bottom: 17.6px;
+    font-family:"Roboto", sans-serif;
+  }
+  .findpass {
+    font-size: 17.6px;
+    color: #2C3432;
+    font-family:"Roboto", sans-serif;
+  }
+  img {
+    width: 18px;
+    padding-right: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"> <img src="/images/구글로고.jpg" alt=""> Log in with Google</div>
+    <div class="or">or</div>
+    <div class="id">
+      <input class="userid" type="text" value="Username">
+    </div>
+    <div class="password">
+      <input type="password" class="userpassword" value="Password">
+    </div>
+    <div>
+      <button class= "button"type="button">LOGIN</button>
+    </div>
+    <div class="findpass">
+      Forgot your password?
+    </div>
+  </div>
+</body>
+</html>
