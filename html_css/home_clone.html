@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
         * {
             box-sizing: border-box;
         }
+
         body {
             background-color: antiquewhite;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
         }
+
         body::-webkit-scrollbar {
             width: 12px;
         }
+
         body::-webkit-scrollbar-thumb {
-            background: #c1c1c1; /* 스크롤바의 색상 */
+            background: #c1c1c1;
+            /* 스크롤바의 색상 */
             background-clip: padding-box;
             border: 3px solid transparent;
         }
 
         body::-webkit-scrollbar-track {
-        background: #ffff;  /*스크롤바 뒷 배경 색상*/
+            background: #ffff;
+            /*스크롤바 뒷 배경 색상*/
         }
+
         .head {
             background-color: red;
             height: 85px;
@@ -33,32 +43,39 @@
             justify-content: center;
             box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
         }
+
         .logo_box {
             background-color: bisque;
             width: 17%;
         }
+
         .logo {
             padding: 13px 0 13px 50px;
         }
+
         .menu {
             display: flex;
             justify-content: center;
             background-color: aqua;
             width: 70%;
         }
+
         .menu-bar {
             width: 100%;
             height: 85px;
             position: relative;
         }
+
         ol {
             margin: 0;
             display: flex;
             justify-content: center;
         }
+
         ul {
             display: block;
         }
+
         li {
             color: #424242;
             font-weight: bold;
@@ -70,147 +87,223 @@
             display: inline-block;
             position: relative;
         }
+
         li:hover {
             color: plum;
         }
+
         li::after {
-             position: absolute; 
-             content:""; 
-             display: block;
-             border-bottom: 2px solid plum;
-             transition: 250ms ease-in-out;
-               left: auto;
-                right: 0;  
-                width: 0;
-                height: 2px;
-            }
+            position: absolute;
+            content: "";
+            display: block;
+            border-bottom: 2px solid plum;
+            transition: 250ms ease-in-out;
+            left: auto;
+            right: 0;
+            width: 0;
+            height: 2px;
+        }
+
         li:hover::after {
             position: relative;
             width: 100%;
             left: 0;
         }
+
         .stellive {
             width: 157px;
             height: auto;
         }
+
         .body {
             width: 100%;
             height: 500px;
             background-color: blue;
         }
+
         .slider {
-            width: 100%; /* 원하는 슬라이드의 최대 너비 설정 */
-            overflow: hidden; /* 슬라이드 밖의 내용 숨기기 */
-            position: relative; /* 상대적 위치 */
+            width: 100%;
+            /* 원하는 슬라이드의 최대 너비 설정 */
+            overflow: hidden;
+            /* 슬라이드 밖의 내용 숨기기 */
+            position: relative;
+            /* 상대적 위치 */
         }
+
         .slides {
-            display: flex; /* 슬라이드를 가로로 나열 */
-            animation: slide-animation 20s infinite; /* 애니메이션 적용, 무한 반복 */
+            display: flex;
+            /* 슬라이드를 가로로 나열 */
+            animation: slide-animation 20s infinite;
+            /* 애니메이션 적용, 무한 반복 */
         }
+
         .slide {
-            flex: 0 0 100%; /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */ 
-            transition: transform 1s ease; /* 부드러운 변환 효과 */
-            display: flex; /* flexbox 사용 */
-            justify-content: center; /* 가로 중앙 정렬 */
-            align-items: center; /* 세로 중앙 정렬 */
-            height: 770px; /* 슬라이드의 높이 */
-            background-color: #ccc; /* 배경 색상 */
-            color: white; /* 글자 색상 */
+            flex: 0 0 100%;
+            /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */
+            transition: transform 1s ease;
+            /* 부드러운 변환 효과 */
+            display: flex;
+            /* flexbox 사용 */
+            justify-content: center;
+            /* 가로 중앙 정렬 */
+            align-items: center;
+            /* 세로 중앙 정렬 */
+            height: 770px;
+            /* 슬라이드의 높이 */
+            background-color: #ccc;
+            /* 배경 색상 */
+            color: white;
+            /* 글자 색상 */
         }
+
         /* 애니메이션 효과 */
         @keyframes slide-animation {
-            0%, 20% { transform: translateX(0); } /* 0초부터 4초까지 첫 번째 이미지 */
-            25%, 45% { transform: translateX(-100%); } /* 5초부터 9초까지 두 번째 이미지 */
-            50%, 70% { transform: translateX(-200%); } /* 10초부터 14초까지 세 번째 이미지 */
-            75%, 95% { transform: translateX(-300%); } /* 15초부터 19초까지 네 번째 이미지 */
-            100% { transform: translateX(0); } /* 20초에 다시 첫 번째 이미지로 리셋 */
+
+            0%,
+            20% {
+                transform: translateX(0);
+            }
+
+            /* 0초부터 4초까지 첫 번째 이미지 */
+            25%,
+            45% {
+                transform: translateX(-100%);
+            }
+
+            /* 5초부터 9초까지 두 번째 이미지 */
+            50%,
+            70% {
+                transform: translateX(-200%);
+            }
+
+            /* 10초부터 14초까지 세 번째 이미지 */
+            75%,
+            95% {
+                transform: translateX(-300%);
+            }
+
+            /* 15초부터 19초까지 네 번째 이미지 */
+            100% {
+                transform: translateX(0);
+            }
+
+            /* 20초에 다시 첫 번째 이미지로 리셋 */
         }
+
         .shirt {
             width: 100%;
             height: 100%;
             position: relative;
         }
+
         .leg {
             width: 100%;
             height: 1730px;
             background-image: url(/images/메인배경.png);
             background-size: cover;
             background-position: center;
+            display: flex;
+            justify-content: center;
         }
+
         .ground {
-            width: 1280px;
+            width: 100%;
             height: 1730px;
             padding: 0 15px;
             margin: 0 310px 130px;
             background-color: brown;
             position: relative;
         }
+
         .star {
             margin-bottom: 20px;
         }
-        .news { 
+
+        .news {
             margin-bottom: 15px;
         }
+
         .lettering {
             margin-bottom: 50px;
         }
+
         .hamstring {
-            width: 1280px;
+            width: 100%;
             height: 650px;
             margin: 0 0 100px 0;
         }
+
         .title {
-            position: absolute;
+            position: relative;
             width: 100%;
             height: 1555px;
             padding: 30px 0 0 0;
             left: 50%;
             transform: translate(-50%);
-            background-color :aquamarine;
+            background-color: aquamarine;
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
+
         .newsbox {
             width: 100%;
             height: 380px;
             background: red;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
         }
-        .mainnews1, .mainnews2, .mainnews3 {
-            width: 400px;
-            height: 350px;
+
+        .mainnews1,
+        .mainnews2,
+        .mainnews3 {
+            width: 415px;
+            height: 380px;
             background-color: white;
             position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
-        .mainnews1:hover, .mainnews2:hover, .mainnews3:hover {
-            .newsbanner{
-                transform : scale(1.1);
+
+        .mainnews1:hover,
+        .mainnews2:hover,
+        .mainnews3:hover {
+            .newsbanner {
+                transform: scale(1.1);
             }
         }
+
         .mainnews1 {
             margin-right: 35px;
         }
-        .newsbannerbox {
-            padding-left: 6px;
-            width: 368px;
 
+        .news_pic_box {
+            width: 398px;
+            height: 219px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
         }
-        .newsbanner {
-            padding-top: 6px;
-        }
+
+
         .newstext {
-            width: 319px;
-            height: 137px;
+            width: 366px;
+            height: 120px;
             padding: 37px 15px 40px 15px;
-            font-size: 1.31rem;
+            font-size: 20px;
         }
+
         .mainnews2 {
             margin: 0 35px;
         }
+
         .mainnews3 {
             margin-left: 35px;
         }
+
         .clip {
             width: 11px;
             height: 11px;
@@ -219,7 +312,81 @@
             position: absolute;
             right: 4px;
             bottom: 4px;
+        }
+
+        .jc-c {
+            margin-top: 10px;
+            width: 100%;
+            height: 65px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-size: cover;
+        }
+
+        .po-r {
+            margin-top: 10px;
+            width: 210px;
+            height: 61.59px;
+            margin-top: 10px;
+            border-radius: 50px;
+            background-repeat: no-repeat;
+            background-image: url(/images/batch_moremoremmmmmm.png), url(/images/btn2.png), url(/images/btn3.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+        }
+
+        .move {
+            opacity: 0;
+        }
+
+        .po-r:hover {
+            .move_n {
+                opacity: 0;
             }
+
+            .move {
+                opacity: 1;
+            }
+        }
+
+        .svg_icon {
+            width: 197.5px;
+            height: 48.5px;
+            overflow: visible;
+        }
+
+        path {
+            width: 195.15px;
+            height: 45.78px;
+        }
+
+        .textmore {
+            position: absolute;
+            font-size: 22px;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+        }
+
+        .bt {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: transparent;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .musicbox {
+            width: 100%;
+            height: 540.99px;
+            background: olivedrab;
+            display: flex;
+        }
+
         footer {
             width: 100%;
             height: 507px;
@@ -227,6 +394,7 @@
         }
     </style>
 </head>
+
 <body>
     <header class="head">
         <div class="logo_box">
@@ -235,119 +403,173 @@
             </div>
         </div>
         <div class="menu">
-        <div class="menu-bar">
-        </nav>
-            <ol>
-                <li><span>ABOUT</span></li>
-                <li><span>NEWS</span></li>
-                <li><span>TALENTS</span></li>
-                <li><span>MUSIC</span></li>
-                <li><span>GOODS</span></li>
-                <li><span>GUIDELINE</span></li>
-                <li><span>CONTACT</span></li>
-            </ol>
-            </nav>
-        </div>
+            <div class="menu-bar">
+                </nav>
+                <ol>
+                    <li><span>ABOUT</span></li>
+                    <li><span>NEWS</span></li>
+                    <li><span>TALENTS</span></li>
+                    <li><span>MUSIC</span></li>
+                    <li><span>GOODS</span></li>
+                    <li><span>GUIDELINE</span></li>
+                    <li><span>CONTACT</span></li>
+                </ol>
+                </nav>
+            </div>
         </div>
     </header>
     <div class="body">
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/61d6fa48d97b5bf29d1582b76ad1def4.png">
-                    </div>
-
-                    <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/99b983892094b5c6d2fc3736e15da7d1.png">
-                    </div>
-
-                    <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/f4b004068017e76aae896674b8eeb370.png">
-                    </div>
-
-                    <div class="slide"><img class ="shirt" src="https://stellive.me/files/attach/images/148/527e52323f5f81909c256c261bcc66a0.png">
-                    </div>
-
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img class="shirt"
+                        src="https://stellive.me/files/attach/images/148/61d6fa48d97b5bf29d1582b76ad1def4.png">
                 </div>
 
+                <div class="slide"><img class="shirt"
+                        src="https://stellive.me/files/attach/images/148/99b983892094b5c6d2fc3736e15da7d1.png">
+                </div>
+
+                <div class="slide"><img class="shirt"
+                        src="https://stellive.me/files/attach/images/148/f4b004068017e76aae896674b8eeb370.png">
+                </div>
+
+                <div class="slide"><img class="shirt"
+                        src="https://stellive.me/files/attach/images/148/527e52323f5f81909c256c261bcc66a0.png">
+                </div>
             </div>
+        </div>
 
         <div class="leg">
             <div class="ground">
                 <div class="title">
                     <div class="hamstring">
-                            <div class="star">
-                                <img src="/images/메인별.png">
-                            </div>
+                        <div class="star">
+                            <img src="/images/메인별.png">
+                        </div>
 
-                            <div class="news">
-                                <img src="/images/메인news.png">
-                            </div>
-                            
-                            <div class="lettering">
-                                <img src="images/stellive.png">
-                            </div>
+                        <div class="news">
+                            <img src="/images/메인news.png">
+                        </div>
 
-                            <div class="newsbox">
-                                <div class="mainnews1">
+                        <div class="lettering">
+                            <img src="images/stellive.png">
+                        </div>
+
+                        <div class="newsbox">
+                            <div class="mainnews1">
+                                <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img class="newsbanner" src="/images/myFairy.jpg">
-                                    </div>
-                                    <div class="newstext">
-                                        STELLIVE MUSIC PROJECT 003    
-                                    </div>
-                                    <div class="clip">
+                                        <img class="newsbanner" src="/images/batch_팬아트공모전.jpg">
                                     </div>
                                 </div>
-
-                                <div class="mainnews2">
-                                    <div class="newsbannerbox">
-                                        <img src="/images/newshina.jpg"class= "newsbanner">
-                                    </div>
-                                    <div class="newstext">
-                                        시라유키 히나, 네네코 마시로 신의상 공개 시간 변경 안내
-                                    </div>
-                                    <div class="clip">
-                                    </div>
+                                <div class="newstext">
+                                    STELLIVE MUSIC PROJECT 003
                                 </div>
-
-                                <div class="mainnews3">
-                                    <div class="newsbannerbox">
-                                        <img src="/images/newstabi.jpg"class="newsbanner">
-                                    </div>
-                                    <div class="newstext">
-                                        Stellive Univers 신의상 공개!
-                                    </div>
-                                    <div class="clip">
-                                    </div>
+                                <div class="clip">
                                 </div>
                             </div>
 
-                            <div>
-                                <button type="button"><img src="/images/more.png">
-                                </button>
+                            <div class="mainnews2">
+                                <div class="news_pic_box">
+                                    <div class="newsbannerbox">
+                                        <img src="/images/batch_스텔키친.jpg" class="newsbanner">
+                                    </div>
+                                </div>
+                                <div class="newstext">
+                                    시라유키 히나, 네네코 마시로 신의상 공개 시간 변경 안내
+                                </div>
+                                <div class="clip">
+                                </div>
+                            </div>
+
+                            <div class="mainnews3">
+                                <div class="news_pic_box">
+                                    <div class="newsbannerbox">
+                                        <img src="/images/batch_batch_마이페어리.jpg" class="newsbanner">
+                                    </div>
+                                </div>
+                                <div class="newstext">
+                                    Stellive Univers 신의상 공개!
+                                </div>
+                                <div class="clip">
+                                </div>
                             </div>
                         </div>
 
-                        <div class="calf">
-                            <div class="star">
-                                <img src="/images/메인별.png">
+                        <div class="jc-c">
+                            <div class="po-r">
+                                <span class="textmore">more</span>
+                                <svg class="svg_icon">
+                                    <path id="line" stroke="#D9D8F0" fill="none"
+                                        d="M25.415.787h146.966c13.306 0 24.094 10.247 24.094 22.888 0 12.641-10.788 22.888-24.094 22.888H25.415c-13.305 0-24.091-10.247-24.091-22.888C1.324 11.034 12.11.787 25.415.787z">
+                                    </path>
+                                    <circle cx="32" cy="1" r="2" fill="#fff" class="move_n"></circle>
+                                    <circle cx="0" cy="0" r="2" fill="#fff" class="move">
+                                        <animateMotion dur="8s" repeatCount="indefinite">
+                                            <mpath xlink:href="#line"></mpath>
+                                        </animateMotion>
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calf">
+                        <div class="star">
+                            <img src="/images/메인별.png">
+                        </div>
+
+                        <div class="news">
+                            <img src="/images/main_music.png">
+                        </div>
+
+                        <div class="lettering">
+                            <img src="images/stellive.png">
+                        </div>
+
+                        <div class="musicbox">
+                            <div class="mainnews1">
+                                <div class="newsbannerbox">
+                                    <img class="newsbanner" src="/images/팬아트공모전.jpg">
+                                </div>
                             </div>
 
-                            <div class="news">
-                                <img src="/images/main_music.png">
+                            <div class="mainnews2">
+                                <div class="newsbannerbox">
+                                    <img src="/images/스텔키친.jpg" class="newsbanner">
+                                </div>
                             </div>
-                            
-                            <div class="lettering">
-                                <img src="images/stellive.png">
+
+                            <div class="mainnews3">
+                                <div class="newsbannerbox">
+                                    <img src="/images/마이페어리.jpg" class="newsbanner">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="jc-c">
+                            <div class="po-r">
+                                <span class="textmore">more</span>
+                                <svg class="svg_icon">
+                                    <path id="line" stroke="#D9D8F0" fill="none"
+                                        d="M25.415.787h146.966c13.306 0 24.094 10.247 24.094 22.888 0 12.641-10.788 22.888-24.094 22.888H25.415c-13.305 0-24.091-10.247-24.091-22.888C1.324 11.034 12.11.787 25.415.787z">
+                                    </path>
+                                    <circle cx="32" cy="1" r="2" fill="#fff" class="move_n"></circle>
+                                    <circle cx="0" cy="0" r="2" fill="#fff" class="move">
+                                        <animateMotion dur="8s" repeatCount="indefinite">
+                                            <mpath xlink:href="#line"></mpath>
+                                        </animateMotion>
+                                    </circle>
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </div>
-
         <footer>
         </footer>
-
     </div>
-
 </body>
+
 </html>
