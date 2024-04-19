@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
 
         * {
             box-sizing: border-box;
@@ -37,71 +38,86 @@
         }
 
         .head {
-            /* background-color: red; */
             height: 85px;
+            /* background-color: red; */
             display: flex;
             justify-content: center;
+            align-items: center;
             box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
+            position: relative;
+            /* 네비게이션 바 */
         }
 
         .logo_box {
-            /* background-color: bisque; */
-            width: 17%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 5%;
+            width: 30%;
+            height: 100%;
+            display: flex;
         }
-
-        .logo {
-            padding: 13px 0 13px 50px;
+        .logo_box > img {
+            width: 40%;
+            height: 60%;
         }
 
         .menu {
             display: flex;
             justify-content: center;
             /* background-color: aqua; */
-            width: 70%;
+            width: 80%;
+            height: 100%;
         }
 
         .menu-bar {
-            width: 100%;
-            height: 85px;
-            position: relative;
+            width: 80%;
+            height: 100%;
+            position: absolute;
+            right: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         ol {
+            width: 50%;
+            height: 100%;
             margin: 0;
             display: flex;
-            justify-content: center;
-        }
-
-        ul {
-            display: block;
+            position: absolute;
+            justify-content: space-between;
+            align-items: center;
         }
 
         li {
+            width: 100%;
+            height: 100%;
+            position: relative;
             color: #424242;
             font-weight: bold;
             list-style-type: none;
             margin-right: 60px;
-            padding: 33px 0 34px 0;
             font-size: 17px;
             font-family: "Montserrat", sans-serif;
-            display: inline-block;
-            position: relative;
+            padding: 33px 0;
         }
 
         li:hover {
-            color: plum;
+            color: #7987E0;
         }
 
         li::after {
             position: absolute;
             content: "";
             display: block;
-            border-bottom: 2px solid plum;
+            border-bottom: 2px solid #7987E0;
             transition: 250ms ease-in-out;
             left: auto;
             right: 0;
             width: 0;
-            height: 2px;
         }
 
         li:hover::after {
@@ -111,7 +127,7 @@
         }
 
         .stellive {
-            width: 157px;
+            width: 10%;
             height: auto;
         }
 
@@ -198,7 +214,7 @@
 
         .leg {
             width: 100%;
-            height: 1730px;
+            height: 1850px;
             background-image: url(/images/메인배경.png);
             background-size: cover;
             background-position: center;
@@ -248,23 +264,28 @@
 
         .newsbox {
             width: 100%;
-            height: 380px;
+            height: 60%;
             /* background: red; */
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
         }
 
         .mainnews1,
         .mainnews2,
         .mainnews3 {
-            width: 415px;
+            width: 28%;
             height: 100%;
-            /* background-color: white; */
+            background-color: white;
             position: relative;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            border: 1px solid #D7D7EC;
+
+            .newsbanner {
+                transition: 0.5s ease-in-out;
+            }
         }
 
         .mainnews1:hover,
@@ -275,13 +296,9 @@
             }
         }
 
-        .mainnews1 {
-            margin-right: 35px;
-        }
-
         .news_pic_box {
-            width: 398px;
-            height: 219px;
+            width: 95%;
+            height: 60%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -290,22 +307,41 @@
 
 
         .newstext {
-            width: 366px;
-            height: 120px;
+            width: 90%;
+            height: 32%;
             padding: 30px 15px 40px 0;
             margin-top: 20px;
-            font-size: 22px;
+            font-size: 20px;
             display: flex;
             justify-content: left;
             font-weight: 700;
+            text-align: left;
+        }
+
+        .mainnews1 {
+            position: relative;
+            margin-right: 23px;
+        }
+
+        .newsdate {
+            position: absolute;
+            width: 160px;
+            height: 33px;
+            background-image: linear-gradient(to top, #7987e1, #867dd9);
+            top: -34px;
+            left: 0;
+            border-radius: 0 50px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .mainnews2 {
-            margin: 0 35px;
+            margin: 0 23px;
         }
 
         .mainnews3 {
-            margin-left: 35px;
+            margin-left: 23px;
         }
 
         .clip {
@@ -319,7 +355,7 @@
         }
 
         .jc-c {
-            margin-top: 10px;
+            margin-top: 35px;
             width: 100%;
             height: 65px;
             position: relative;
@@ -386,30 +422,190 @@
 
         .musicbox {
             width: 100%;
-            height: 540.99px;
+            height: 70.7%;
             /* background: olivedrab; */
             display: flex;
+            justify-content: center;
+        }
+
+        .album1,
+        .album2,
+        .album3 {
+            width: 415px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .stardate {
+            font-size: 21px;
+            font-weight: 600;
+            color: #F0F0F4;
+            padding: 0 9px;
+        }
+
+        .mhover {
+            img {
+                transition: 0.6s ease-in-out;
+            }
+        }
+
+        .mhover:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .album_cover1,
+        .album_cover2,
+        .album_cover3 {
+            width: 100%;
+            height: 78%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            overflow: hidden;
+            border: 1px solid #D7D7EC;
+            position: relative;
+        }
+
+        .album1 {
+            margin-right: 25px;
+        }
+
+        .album2 {
+            margin: 0 25px;
+        }
+
+        .album3 {
+            margin-left: 25px;
+        }
+
+        .musictitle {
+            padding: 25px 10px 0 10px;
+            height: 25%;
+            text-align: left;
+            letter-spacing: -0.5px;
+            word-break: break-all;
+            font-family: 'NanumSquareNeo-Variable', sans-serif;
+        }
+
+        .musictext {
+            font-size: 28px;
+            line-height: 1.25;
+            font-weight: 800;
+            font-family: 'NanumSquareNeo-Variable', sans-serif;
+        }
+
+        .musictextp {
+            font-size: 20px;
+            font-family: 'NanumSquareNeo-Variable', sans-serif;
         }
 
         footer {
             width: 100%;
-            height: 507px;
+            height: 100%;
             background-image: url(/images/메인발바닥.png);
+            display: flex;
+            justify-content: center;
         }
+
+        .foot {
+            width: 80%;
+            height: 100%;
+            padding: 50px 0 130px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .snstext {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .footstar {
+            margin-bottom: 24px;
+        }
+
+        .footstellive {
+            margin-bottom: 20px;
+        }
+
+        .footline {
+            width: 100%;
+            margin: 65px auto 70px;
+            border: 2px solid #7987E0;
+            max-width: 700px;
+            height: 2px;
+        }
+
+        .stellivesns {
+            width: 40%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .stllsns {
+            filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5)) brightness(100);
+        }
+        @media screen and (max-width:992px){
+            .slide {
+                height: 250px;
+            }
+            .head {
+                height: 50px;
+            }
+            ol {
+                background-repeat: no-repeat;
+            }
+            li {
+                display: none;
+            }
+            .menu {
+                width: 98%;
+                background-image: url(/images/메뉴바.png);
+                background-size: 25px;
+                background-repeat: no-repeat;
+                background-position: left;
+            }
+
+            .logo_box {
+                width: 35%;
+                height: 100%;
+                position: relative;
+                background-repeat: no-repeat;
+                left: 2px;
+            }
+            .newsbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* 다음 행으로 자동으로 넘어갈 수 있도록 설정 */
+        align-items: flex-start; /* 요소들을 상단에 정렬 */
+    }
+    .mainnews1, .mainnews2 {
+        width: 350px;
+    }
+    .mainnews3 {
+        margin-top: 60px; /* 위 요소와의 간격 */
+    }
+}
+        
     </style>
 </head>
 
 <body>
     <header class="head">
-        <div class="logo_box">
-            <div class="logo">
-                <img class="stellive" src="/images/스텔라이브로고.png">
-            </div>
-        </div>
         <div class="menu">
+            <div class="logo_box">
+                    <img class="stellive" src="/images/스텔라이브로고.png">
+            </div>
             <div class="menu-bar">
-                </nav>
-                <ol>
+                    <ol>
                     <li><span>ABOUT</span></li>
                     <li><span>NEWS</span></li>
                     <li><span>TALENTS</span></li>
@@ -417,8 +613,7 @@
                     <li><span>GOODS</span></li>
                     <li><span>GUIDELINE</span></li>
                     <li><span>CONTACT</span></li>
-                </ol>
-                </nav>
+                    </ol>
             </div>
         </div>
     </header>
@@ -448,22 +643,26 @@
                 <div class="title">
                     <div class="hamstring">
                         <div class="star">
-                            <img src="/images/메인별.png">
+                            <img src="/images/메인별.png" style="scale: 1.1;">
                         </div>
 
                         <div class="news">
-                            <img src="/images/메인news.png">
+                            <img src="/images/메인news.png" style="scale: 1.1;">
                         </div>
 
                         <div class="lettering">
-                            <img src="images/stellive.png">
+                            <img src="images/stellive.png" style="scale: 1.1;">
                         </div>
 
                         <div class="newsbox">
                             <div class="mainnews1">
+                                <div class="newsdate">
+                                    <img src="/images/smallstar.png" style="scale: 1.2;">
+                                    <span class="stardate">2024.04.19</span>
+                                </div>
                                 <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img class="newsbanner" src="/images/batch_팬아트공모전.jpg">
+                                        <img class="newsbanner" src="/images/batch_팬아트공모전.jpg" style="scale: 1.1;">
                                     </div>
                                 </div>
                                 <div class="newstext">
@@ -474,9 +673,13 @@
                             </div>
 
                             <div class="mainnews2">
+                                <div class="newsdate">
+                                    <img src="/images/smallstar.png" style="scale: 1.2;">
+                                    <span class="stardate">2024.04.19</span>
+                                </div>
                                 <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img src="/images/batch_스텔키친.jpg" class="newsbanner">
+                                        <img src="/images/batch_스텔키친.jpg" class="newsbanner" style="scale: 1.1;">
                                     </div>
                                 </div>
                                 <div class="newstext">
@@ -487,9 +690,13 @@
                             </div>
 
                             <div class="mainnews3">
+                                <div class="newsdate">
+                                    <img src="/images/smallstar.png" style="scale: 1.2;">
+                                    <span class="stardate">2024.04.19</span>
+                                </div>
                                 <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img src="/images/batch_batch_마이페어리.jpg" class="newsbanner">
+                                        <img src="/images/batch_batch_마이페어리.jpg" class="newsbanner" style="scale: 1.1;">
                                     </div>
                                 </div>
                                 <div class="newstext">
@@ -520,33 +727,45 @@
 
                     <div class="calf">
                         <div class="star">
-                            <img src="/images/메인별.png">
+                            <img src="/images/메인별.png" style="scale: 1.1;">
                         </div>
 
                         <div class="news">
-                            <img src="/images/main_music.png">
+                            <img src="/images/main_music.png" style="scale: 1.1;">
                         </div>
 
                         <div class="lettering">
-                            <img src="images/stellive.png">
+                            <img src="images/stellive.png" style="scale: 1.1;">
                         </div>
 
                         <div class="musicbox">
-                            <div class="mainnews1">
-                                <div class="newsbannerbox">
-                                    <img class="newsbanner" src="/images/팬아트공모전.jpg">
+                            <div class="album1 mhover">
+                                <div class="album_cover1">
+                                    <img class="musicbanner" src="/images/큐라링.jpg" style="scale: 1.1;">
+                                </div>
+                                <div class="musictitle">
+                                    <span class="musictext">큐 큐라링 『lyowa』Cover</span>
+                                    <p class="musictextp">Ayatsuno Yuni</p>
                                 </div>
                             </div>
 
-                            <div class="mainnews2">
-                                <div class="newsbannerbox">
-                                    <img src="/images/스텔키친.jpg" class="newsbanner">
+                            <div class="album2 mhover">
+                                <div class="album_cover2">
+                                    <img src="/images/리제x칸나.jpg" class="musicbanner" style="scale: 1.1;">
+                                </div>
+                                <div class="musictitle">
+                                    <span class="musictext">Airi Kanna x Akane Lize 'Hit On Shot'</span>
+                                    <p class="musictextp">Airi kanna & Akane Lize</p>
                                 </div>
                             </div>
 
-                            <div class="mainnews3">
-                                <div class="newsbannerbox">
-                                    <img src="/images/마이페어리.jpg" class="newsbanner">
+                            <div class="album3 mhover">
+                                <div class="album_cover3">
+                                    <img src="/images/마시로x타비.jpg" class="musicbanner" style="scale: 1.1;">
+                                </div>
+                                <div class="musictitle">
+                                    <span class="musictext">사랑하고 있는거야 『夏代孝明』 Cover</span>
+                                    <p class="musictextp">Neneko Mashiro & Arahashi Tabi</p>
                                 </div>
                             </div>
                         </div>
@@ -572,6 +791,26 @@
             </div>
         </div>
         <footer>
+            <div class="foot">
+                <div class="snstext">
+                    <div class="footstar">
+                        <img src="/images/발바닥별.png" style="scale: 1.1;">
+                    </div>
+                    <div class="footstellive">
+                        <img src="/images/발바닥스텔라이브.png" style="scale: 1.1;">
+                    </div>
+                    <div>
+                        <img src="/images/발바닥오피셜sns.png" style="scale: 1.1;">
+                    </div>
+                    <div class="footline">
+                    </div>
+                </div>
+                <div class="stellivesns">
+                    <img src="/images/twitter.png" class="stllsns" style="scale: 1.1;">
+                    <img src="images/navercafe.png" class="stllsns" style="scale: 1.1;">
+                    <img src="/images/youtube.png" class="stllsns" style="scale: 1.1;">
+                </div>
+            </div>
         </footer>
     </div>
 </body>
