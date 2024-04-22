@@ -1,0 +1,732 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+
+* {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    /* background-color: antiquewhite; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    /* 스크롤바의 색상 */
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffff;
+    /*스크롤바 뒷 배경 색상*/
+}
+
+.head {
+    height: 85px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
+    position: relative;
+    /* 네비게이션 바 */
+}
+
+.logo_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.logo_box>img {
+    width: 70%;
+    height: 60%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100%;
+}
+
+.menu-bar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    left: 250px;
+}
+
+ol {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: #424242;
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    padding: 33px 0;
+    margin-right: 50px;
+}
+
+li:hover {
+    color: #7987E0;
+}
+
+li::after {
+    position: absolute;
+    content: "";
+    display: block;
+    border-bottom: 2px solid #7987E0;
+    transition: 250ms ease-in-out;
+    left: auto;
+    right: 0;
+    width: 0;
+}
+
+li:hover::after {
+    position: relative;
+    width: 100%;
+    left: 0;
+}
+
+.stellive {
+    width: 10%;
+    height: 680px;
+}
+
+.body {
+    width: 100%;
+    /* background-color: blue; */
+}
+
+.slider {
+    width: 100%;
+    /* 원하는 슬라이드의 최대 너비 설정 */
+    overflow: hidden;
+    /* 슬라이드 밖의 내용 숨기기 */
+    position: relative;
+    /* 상대적 위치 */
+}
+
+.slides {
+    display: flex;
+    /* 슬라이드를 가로로 나열 */
+    animation: slide-animation 20s infinite;
+    /* 애니메이션 적용, 무한 반복 */
+}
+
+.slide {
+    flex: 0 0 100%;
+    /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */
+    transition: transform 1s ease;
+    /* 부드러운 변환 효과 */
+    display: flex;
+    /* flexbox 사용 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    height: 770px;
+    /* 슬라이드의 높이 */
+    background-color: #ccc;
+    /* 배경 색상 */
+    color: white;
+    /* 글자 색상 */
+}
+
+/* 애니메이션 효과 */
+@keyframes slide-animation {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    /* 0초부터 4초까지 첫 번째 이미지 */
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+
+    /* 5초부터 9초까지 두 번째 이미지 */
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+
+    /* 10초부터 14초까지 세 번째 이미지 */
+    75%,
+    95% {
+        transform: translateX(-300%);
+    }
+
+    /* 15초부터 19초까지 네 번째 이미지 */
+    100% {
+        transform: translateX(0);
+    }
+
+    /* 20초에 다시 첫 번째 이미지로 리셋 */
+}
+
+.shirt {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.leg {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://stellive.me/files/attach/images/148/2a872e139e9fd6921ef1860339c79fd0.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.ground {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    margin-bottom: 130px;
+    /* background-color: brown; */
+    position: relative;
+}
+
+.star {
+    margin-bottom: 20px;
+}
+
+.news {
+    margin-bottom: 15px;
+}
+
+.lettering {
+    margin-bottom: 50px;
+}
+
+.hamstring {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 100px 0;
+}
+
+.title {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0 0 0;
+    left: 50%;
+    transform: translate(-50%);
+    /* background-color: aquamarine; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsbox {
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainnews1,
+.mainnews2,
+.mainnews3 {
+    width: 20%;
+    height: 48%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #D7D7EC;
+
+    .newsbanner {
+        transition: 0.5s ease-in-out;
+    }
+}
+
+.mainnews1:hover,
+.mainnews2:hover,
+.mainnews3:hover {
+    .newsbanner {
+        transform: scale(1.1);
+    }
+}
+
+.news_pic_box {
+    width: 95%;
+    height: 100%;
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.newsbanner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.newstext {
+    width: 90%;
+    height: 35%;
+    padding: 35px 15px 35px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: left;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* .mainnews1 {
+    position: relative;
+    margin-right: 23px;
+} */
+
+.newsdate {
+    position: absolute;
+    width: 40%;
+    height: 10.5%;
+    background-image: linear-gradient(to top, #7987e1, #867dd9);
+    top: -34px;
+    left: 0;
+    border-radius: 0 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.mainnews2 {
+    margin: 0 23px;
+}
+
+.mainnews3 {
+    margin-left: 23px;
+} */
+
+.clip {
+    width: 11px;
+    height: 11px;
+    background-color: #D7D7EC;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+}
+
+.jc-c {
+    margin-top: 35px;
+    /* width: 100%; */
+    height: 65px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+}
+
+.po-r {
+    /* margin-top: 10px; */
+    width: 210px;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-image: url(https://stellive.me/files/attach/images/main/more_btn_bg.png), url(/images/btn2.png), url(/images/btn3.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+.move {
+    opacity: 0;
+}
+
+.po-r:hover {
+    .move_n {
+        opacity: 0;
+    }
+
+    .move {
+        opacity: 1;
+    }
+}
+
+.svg_icon {
+    width: 197.5px;
+    height: 48.5px;
+    overflow: visible;
+}
+
+path {
+    width: 195.15px;
+    height: 45.78px;
+}
+
+.textmore {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.bt {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: transparent;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.musicbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.album1,
+.album2,
+.album3 {
+    width: 28%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.stardate {
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: #F0F0F4;
+    padding: 0 9px;
+}
+
+.mhover {
+    img {
+        transition: 0.6s ease-in-out;
+    }
+}
+
+.mhover:hover {
+    img {
+        transform: scale(1.1);
+    }
+}
+
+.album_cover1,
+.album_cover2,
+.album_cover3 {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid #D7D7EC;
+}
+
+.musicbanner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.calf {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.musictitle {
+    padding-left: 25px;
+    width: 97%;
+    height: 10%;
+    text-align: left;
+    letter-spacing: -0.5px;
+    word-break: break-all;
+    font-family: 'NanumSquareNeo-Variable', sans-serif;
+}
+
+.musictext {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'NanumSquareNeo-Variable', sans-serif;
+    position: relative;
+    top: 20px;
+}
+
+.musictextp {
+    position: relative;
+    top: 5px;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'NanumSquareNeo-Variable', sans-serif;
+}
+.musicdate {
+    position: absolute;
+    width: 40%;
+    height: 7%;
+    background-image: linear-gradient(to top, #7987e1, #867dd9);
+    bottom: 90%;
+    left: 0;
+    border-radius: 0 50px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 97%;
+    height: 100%;
+    background-image: url(/images/메인발바닥.png);
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale: 1.05;
+}
+
+.foot {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 130px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snstext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footstar {
+    margin-bottom: 24px;
+}
+
+.footstellive {
+    margin-bottom: 20px;
+}
+
+.footline {
+    width: 100%;
+    margin: 65px auto 70px;
+    border: 1px solid #b7bff4;
+
+}
+
+.stellivesns {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stllsns {
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5)) brightness(100);
+}
+
+@media (max-width:992px) {
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .slide {
+        height: 250px;
+    }
+
+    .head {
+        height: 50px;
+    }
+
+    ol {
+        background-repeat: no-repeat;
+    }
+
+    li {
+        display: none;
+    }
+
+    .menu {
+        width: 98%;
+        background-image: url(https://stellive.me/layouts/stellive/img/menu_b.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    .ground {
+        margin-bottom: 0;
+    }
+
+
+    .logo_box {
+        width: 35%;
+        height: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        left: 40%;
+    }
+
+    .newsbox {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .news_pic_box {
+        top: -8px;
+        width: 97%;
+    }
+
+    .newsdate {
+        position: absolute;
+        width: 120px;
+        height: 18px;
+        top: -20px;
+    }
+    .musicdate {
+        width: 120px;
+        height: 18px;
+    }
+
+    .stardate {
+        font-size: 15px;
+    }
+
+    .newstext {
+        margin: 0;
+        padding: 0px 10px 20px 5px;
+        height: -20px;
+        font-size: 12px;
+    }
+
+    .mainnews1,
+    .mainnews2 {
+        position: relative;
+        width: 44%;
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .mainnews3 {
+        position: relative;
+        padding-top: 10px;
+        width: 44%;
+        margin-top: 60px;
+        /* 위 요소와의 간격 */
+        left: -50%;
+        translate: 56%;
+    }
+
+    .newsbannerbox {
+        height: 100%;
+        width: 100%;
+    }
+
+    .newsbanner {
+        height: 100%;
+        width: 100%;
+    }
+
+    .move_n {
+        opacity: 0;
+    }
+
+    .move {
+        opacity: 1;
+    }
+
+    .calf {
+        position: relative;
+        height: 100%;
+    }
+
+    .musicbox {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .album1,
+    .album2 {
+        position: relative;
+        width: 44%;
+        justify-content: center;
+    }
+
+    .album3 {
+        position: relative;
+        width: 44%;
+        margin-top: 60px;
+        /* 위 요소와의 간격 */
+        left: -50%;
+        translate: 56%;
+    }
+    .musictext {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        right: 25px;
+        font-size: 14px;
+        font-weight: 900;
+    }
+    .musictextp {
+        font-size: 11px;
+        position: relative;
+        right: 25px;
+    }
+}

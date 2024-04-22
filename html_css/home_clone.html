@@ -4,608 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            /* background-color: antiquewhite; */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        body::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background: #c1c1c1;
-            /* 스크롤바의 색상 */
-            background-clip: padding-box;
-            border: 3px solid transparent;
-        }
-
-        body::-webkit-scrollbar-track {
-            background: #ffff;
-            /*스크롤바 뒷 배경 색상*/
-        }
-
-        .head {
-            height: 85px;
-            /* background-color: red; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 22px rgba(6, 6, 37, 0.1);
-            position: relative;
-            /* 네비게이션 바 */
-        }
-
-        .logo_box {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            left: 5%;
-            width: 30%;
-            height: 100%;
-            display: flex;
-        }
-        .logo_box > img {
-            width: 40%;
-            height: 60%;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            /* background-color: aqua; */
-            width: 80%;
-            height: 100%;
-        }
-
-        .menu-bar {
-            width: 80%;
-            height: 100%;
-            position: absolute;
-            right: 5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        ol {
-            width: 50%;
-            height: 100%;
-            margin: 0;
-            display: flex;
-            position: absolute;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        li {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            color: #424242;
-            font-weight: bold;
-            list-style-type: none;
-            margin-right: 60px;
-            font-size: 17px;
-            font-family: "Montserrat", sans-serif;
-            padding: 33px 0;
-        }
-
-        li:hover {
-            color: #7987E0;
-        }
-
-        li::after {
-            position: absolute;
-            content: "";
-            display: block;
-            border-bottom: 2px solid #7987E0;
-            transition: 250ms ease-in-out;
-            left: auto;
-            right: 0;
-            width: 0;
-        }
-
-        li:hover::after {
-            position: relative;
-            width: 100%;
-            left: 0;
-        }
-
-        .stellive {
-            width: 10%;
-            height: auto;
-        }
-
-        .body {
-            width: 100%;
-            height: 500px;
-            /* background-color: blue; */
-        }
-
-        .slider {
-            width: 100%;
-            /* 원하는 슬라이드의 최대 너비 설정 */
-            overflow: hidden;
-            /* 슬라이드 밖의 내용 숨기기 */
-            position: relative;
-            /* 상대적 위치 */
-        }
-
-        .slides {
-            display: flex;
-            /* 슬라이드를 가로로 나열 */
-            animation: slide-animation 20s infinite;
-            /* 애니메이션 적용, 무한 반복 */
-        }
-
-        .slide {
-            flex: 0 0 100%;
-            /* flexbox 아이템의 너비를 컨테이너의 100%로 설정 */
-            transition: transform 1s ease;
-            /* 부드러운 변환 효과 */
-            display: flex;
-            /* flexbox 사용 */
-            justify-content: center;
-            /* 가로 중앙 정렬 */
-            align-items: center;
-            /* 세로 중앙 정렬 */
-            height: 770px;
-            /* 슬라이드의 높이 */
-            background-color: #ccc;
-            /* 배경 색상 */
-            color: white;
-            /* 글자 색상 */
-        }
-
-        /* 애니메이션 효과 */
-        @keyframes slide-animation {
-
-            0%,
-            20% {
-                transform: translateX(0);
-            }
-
-            /* 0초부터 4초까지 첫 번째 이미지 */
-            25%,
-            45% {
-                transform: translateX(-100%);
-            }
-
-            /* 5초부터 9초까지 두 번째 이미지 */
-            50%,
-            70% {
-                transform: translateX(-200%);
-            }
-
-            /* 10초부터 14초까지 세 번째 이미지 */
-            75%,
-            95% {
-                transform: translateX(-300%);
-            }
-
-            /* 15초부터 19초까지 네 번째 이미지 */
-            100% {
-                transform: translateX(0);
-            }
-
-            /* 20초에 다시 첫 번째 이미지로 리셋 */
-        }
-
-        .shirt {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .leg {
-            width: 100%;
-            height: 1850px;
-            background-image: url(/images/메인배경.png);
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .ground {
-            width: 100%;
-            height: 1730px;
-            padding: 0 15px;
-            margin: 0 310px 130px;
-            /* background-color: brown; */
-            position: relative;
-        }
-
-        .star {
-            margin-bottom: 20px;
-        }
-
-        .news {
-            margin-bottom: 15px;
-        }
-
-        .lettering {
-            margin-bottom: 50px;
-        }
-
-        .hamstring {
-            width: 100%;
-            height: 650px;
-            margin: 0 0 100px 0;
-        }
-
-        .title {
-            position: relative;
-            width: 100%;
-            height: 1555px;
-            padding: 30px 0 0 0;
-            left: 50%;
-            transform: translate(-50%);
-            /* background-color: aquamarine; */
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .newsbox {
-            width: 100%;
-            height: 60%;
-            /* background: red; */
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .mainnews1,
-        .mainnews2,
-        .mainnews3 {
-            width: 28%;
-            height: 100%;
-            background-color: white;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid #D7D7EC;
-
-            .newsbanner {
-                transition: 0.5s ease-in-out;
-            }
-        }
-
-        .mainnews1:hover,
-        .mainnews2:hover,
-        .mainnews3:hover {
-            .newsbanner {
-                transform: scale(1.1);
-            }
-        }
-
-        .news_pic_box {
-            width: 95%;
-            height: 60%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
-
-        .newstext {
-            width: 90%;
-            height: 32%;
-            padding: 30px 15px 40px 0;
-            margin-top: 20px;
-            font-size: 20px;
-            display: flex;
-            justify-content: left;
-            font-weight: 700;
-            text-align: left;
-        }
-
-        .mainnews1 {
-            position: relative;
-            margin-right: 23px;
-        }
-
-        .newsdate {
-            position: absolute;
-            width: 160px;
-            height: 33px;
-            background-image: linear-gradient(to top, #7987e1, #867dd9);
-            top: -34px;
-            left: 0;
-            border-radius: 0 50px 0 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .mainnews2 {
-            margin: 0 23px;
-        }
-
-        .mainnews3 {
-            margin-left: 23px;
-        }
-
-        .clip {
-            width: 11px;
-            height: 11px;
-            background-color: #D7D7EC;
-            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-            position: absolute;
-            right: 4px;
-            bottom: 4px;
-        }
-
-        .jc-c {
-            margin-top: 35px;
-            width: 100%;
-            height: 65px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            background-size: cover;
-        }
-
-        .po-r {
-            margin-top: 10px;
-            width: 210px;
-            height: 61.59px;
-            margin-top: 10px;
-            border-radius: 50px;
-            background-repeat: no-repeat;
-            background-image: url(/images/batch_moremoremmmmmm.png), url(/images/btn2.png), url(/images/btn3.png);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-position: center;
-        }
-
-        .move {
-            opacity: 0;
-        }
-
-        .po-r:hover {
-            .move_n {
-                opacity: 0;
-            }
-
-            .move {
-                opacity: 1;
-            }
-        }
-
-        .svg_icon {
-            width: 197.5px;
-            height: 48.5px;
-            overflow: visible;
-        }
-
-        path {
-            width: 195.15px;
-            height: 45.78px;
-        }
-
-        .textmore {
-            position: absolute;
-            font-size: 22px;
-            color: white;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-        }
-
-        .bt {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            background-color: transparent;
-            border-radius: 50px;
-            overflow: hidden;
-        }
-
-        .musicbox {
-            width: 100%;
-            height: 70.7%;
-            /* background: olivedrab; */
-            display: flex;
-            justify-content: center;
-        }
-
-        .album1,
-        .album2,
-        .album3 {
-            width: 415px;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .stardate {
-            font-size: 21px;
-            font-weight: 600;
-            color: #F0F0F4;
-            padding: 0 9px;
-        }
-
-        .mhover {
-            img {
-                transition: 0.6s ease-in-out;
-            }
-        }
-
-        .mhover:hover {
-            img {
-                transform: scale(1.1);
-            }
-        }
-
-        .album_cover1,
-        .album_cover2,
-        .album_cover3 {
-            width: 100%;
-            height: 78%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            overflow: hidden;
-            border: 1px solid #D7D7EC;
-            position: relative;
-        }
-
-        .album1 {
-            margin-right: 25px;
-        }
-
-        .album2 {
-            margin: 0 25px;
-        }
-
-        .album3 {
-            margin-left: 25px;
-        }
-
-        .musictitle {
-            padding: 25px 10px 0 10px;
-            height: 25%;
-            text-align: left;
-            letter-spacing: -0.5px;
-            word-break: break-all;
-            font-family: 'NanumSquareNeo-Variable', sans-serif;
-        }
-
-        .musictext {
-            font-size: 28px;
-            line-height: 1.25;
-            font-weight: 800;
-            font-family: 'NanumSquareNeo-Variable', sans-serif;
-        }
-
-        .musictextp {
-            font-size: 20px;
-            font-family: 'NanumSquareNeo-Variable', sans-serif;
-        }
-
-        footer {
-            width: 100%;
-            height: 100%;
-            background-image: url(/images/메인발바닥.png);
-            display: flex;
-            justify-content: center;
-        }
-
-        .foot {
-            width: 80%;
-            height: 100%;
-            padding: 50px 0 130px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .snstext {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .footstar {
-            margin-bottom: 24px;
-        }
-
-        .footstellive {
-            margin-bottom: 20px;
-        }
-
-        .footline {
-            width: 100%;
-            margin: 65px auto 70px;
-            border: 2px solid #7987E0;
-            max-width: 700px;
-            height: 2px;
-        }
-
-        .stellivesns {
-            width: 40%;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .stllsns {
-            filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5)) brightness(100);
-        }
-        @media screen and (max-width:992px){
-            .slide {
-                height: 250px;
-            }
-            .head {
-                height: 50px;
-            }
-            ol {
-                background-repeat: no-repeat;
-            }
-            li {
-                display: none;
-            }
-            .menu {
-                width: 98%;
-                background-image: url(/images/메뉴바.png);
-                background-size: 25px;
-                background-repeat: no-repeat;
-                background-position: left;
-            }
-
-            .logo_box {
-                width: 35%;
-                height: 100%;
-                position: relative;
-                background-repeat: no-repeat;
-                left: 2px;
-            }
-            .newsbox {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; /* 다음 행으로 자동으로 넘어갈 수 있도록 설정 */
-        align-items: flex-start; /* 요소들을 상단에 정렬 */
-    }
-    .mainnews1, .mainnews2 {
-        width: 350px;
-    }
-    .mainnews3 {
-        margin-top: 60px; /* 위 요소와의 간격 */
-    }
-}
-        
-    </style>
+    <title>클론페이지</title>
+    <link rel="stylesheet" href="/css/homeclone.css">
 </head>
 
 <body>
     <header class="head">
         <div class="menu">
             <div class="logo_box">
-                    <img class="stellive" src="/images/스텔라이브로고.png">
+                <img class="stellive" src="/images/스텔라이브로고.png">
             </div>
             <div class="menu-bar">
-                    <ol>
+                <ol>
                     <li><span>ABOUT</span></li>
                     <li><span>NEWS</span></li>
                     <li><span>TALENTS</span></li>
@@ -613,7 +23,7 @@
                     <li><span>GOODS</span></li>
                     <li><span>GUIDELINE</span></li>
                     <li><span>CONTACT</span></li>
-                    </ol>
+                </ol>
             </div>
         </div>
     </header>
@@ -621,19 +31,19 @@
         <div class="slider">
             <div class="slides">
                 <div class="slide"><img class="shirt"
-                        src="https://stellive.me/files/attach/images/148/61d6fa48d97b5bf29d1582b76ad1def4.png">
+                        src="https://stellive.me/files/attach/images/148/d13bab63ec8d99f5005697cae0b6a97c.png">
                 </div>
 
                 <div class="slide"><img class="shirt"
-                        src="https://stellive.me/files/attach/images/148/99b983892094b5c6d2fc3736e15da7d1.png">
+                        src="https://stellive.me/files/attach/images/148/d13bab63ec8d99f5005697cae0b6a97c.png">
                 </div>
 
                 <div class="slide"><img class="shirt"
-                        src="https://stellive.me/files/attach/images/148/f4b004068017e76aae896674b8eeb370.png">
+                        src="https://stellive.me/files/attach/images/148/d13bab63ec8d99f5005697cae0b6a97c.png">
                 </div>
 
                 <div class="slide"><img class="shirt"
-                        src="https://stellive.me/files/attach/images/148/527e52323f5f81909c256c261bcc66a0.png">
+                        src="https://stellive.me/files/attach/images/148/d13bab63ec8d99f5005697cae0b6a97c.png">
                 </div>
             </div>
         </div>
@@ -657,16 +67,17 @@
                         <div class="newsbox">
                             <div class="mainnews1">
                                 <div class="newsdate">
-                                    <img src="/images/smallstar.png" style="scale: 1.2;">
-                                    <span class="stardate">2024.04.19</span>
+                                    <img src="https://stellive.me/files/attach/images/main/w_star.png" style="scale: 1.2;">
+                                    <span class="stardate">2024.04.21</span>
                                 </div>
                                 <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img class="newsbanner" src="/images/batch_팬아트공모전.jpg" style="scale: 1.1;">
+                                        <img class="newsbanner"
+                                            src="https://stellive.me/files/thumbnails/009/002/368x207.crop.jpg?t=1713602187">
                                     </div>
                                 </div>
                                 <div class="newstext">
-                                    스텔라이브 공식 팬북 팬아트 공모전 수상자 안내
+                                    STELLIVE MUSIC POJECT No.3 「Dear My Fariy』 발매!
                                 </div>
                                 <div class="clip">
                                 </div>
@@ -674,16 +85,17 @@
 
                             <div class="mainnews2">
                                 <div class="newsdate">
-                                    <img src="/images/smallstar.png" style="scale: 1.2;">
-                                    <span class="stardate">2024.04.19</span>
+                                    <img src="https://stellive.me/files/attach/images/main/w_star.png" style="scale: 1.2;">
+                                    <span class="stardate">2024.04.20</span>
                                 </div>
                                 <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img src="/images/batch_스텔키친.jpg" class="newsbanner" style="scale: 1.1;">
+                                        <img src="https://stellive.me/files/thumbnails/009/002/368x207.crop.jpg?t=1713602187"
+                                            class="newsbanner">
                                     </div>
                                 </div>
                                 <div class="newstext">
-                                    스텔 키친 오픈!
+                                    Shirayuki Hina x Neneko Mashiro 「Dear My Fairy」 발매까지 D-1
                                 </div>
                                 <div class="clip">
                                 </div>
@@ -691,16 +103,18 @@
 
                             <div class="mainnews3">
                                 <div class="newsdate">
-                                    <img src="/images/smallstar.png" style="scale: 1.2;">
+                                    <img src="https://stellive.me/files/attach/images/main/w_star.png"
+                                        style="scale: 1.2;">
                                     <span class="stardate">2024.04.19</span>
                                 </div>
                                 <div class="news_pic_box">
                                     <div class="newsbannerbox">
-                                        <img src="/images/batch_batch_마이페어리.jpg" class="newsbanner" style="scale: 1.1;">
+                                        <img src="https://stellive.me/files/thumbnails/006/002/368x207.crop.jpg?t=1713495857"
+                                            class="newsbanner">
                                     </div>
                                 </div>
                                 <div class="newstext">
-                                    STELLIVE MUSIC PROJECT 003
+                                    Shirayuki Hina x Neneko Mashiro 「 Dear My Fairy 」 TEASER 공...
                                 </div>
                                 <div class="clip">
                                 </div>
@@ -731,7 +145,7 @@
                         </div>
 
                         <div class="news">
-                            <img src="/images/main_music.png" style="scale: 1.1;">
+                            <img src="https://stellive.me/files/attach/images/main/main_music.png" style="scale: 1.1;">
                         </div>
 
                         <div class="lettering">
@@ -741,7 +155,27 @@
                         <div class="musicbox">
                             <div class="album1 mhover">
                                 <div class="album_cover1">
-                                    <img class="musicbanner" src="/images/큐라링.jpg" style="scale: 1.1;">
+                                    <div class="musicdate">
+                                        <img src="/images/w_star.png" style="scale: 1.2;">
+                                        <span class="stardate">2024.04.21</span>
+                                    </div>
+                                    <img class="musicbanner"
+                                        src="https://stellive.me/files/thumbnails/022/002/380x380.crop.jpg?t=1713685186">
+                                </div>
+                                <div class="musictitle">
+                                    <span class="musictext">Shirayuki Hina X Neneko Mashiro ‘Dear my fairy’</span>
+                                    <p class="musictextp">Shirayuki Hina & Neneko Mashiro</p>
+                                </div>
+                            </div>
+
+                            <div class="album2 mhover">
+                                <div class="album_cover2">
+                                    <div class="musicdate">
+                                        <img src="https://stellive.me/files/attach/images/main/w_star.png" style="scale: 1.2;">
+                                        <span class="stardate">2024.04.16</span>
+                                    </div>
+                                    <img src="https://stellive.me/files/thumbnails/995/001/380x380.crop.jpg?t=1713362653"
+                                        class="musicbanner">
                                 </div>
                                 <div class="musictitle">
                                     <span class="musictext">큐 큐라링 『lyowa』Cover</span>
@@ -749,23 +183,18 @@
                                 </div>
                             </div>
 
-                            <div class="album2 mhover">
-                                <div class="album_cover2">
-                                    <img src="/images/리제x칸나.jpg" class="musicbanner" style="scale: 1.1;">
+                            <div class="album3 mhover">
+                                <div class="album_cover3">
+                                    <div class="musicdate">
+                                        <img src="https://stellive.me/files/attach/images/main/w_star.png" style="scale: 1.2;">
+                                        <span class="stardate">2024.04.03</span>
+                                    </div>
+                                    <img src="https://stellive.me/files/thumbnails/892/001/380x380.crop.jpg?t=1712135532"
+                                        class="musicbanner">
                                 </div>
                                 <div class="musictitle">
                                     <span class="musictext">Airi Kanna x Akane Lize 'Hit On Shot'</span>
                                     <p class="musictextp">Airi kanna & Akane Lize</p>
-                                </div>
-                            </div>
-
-                            <div class="album3 mhover">
-                                <div class="album_cover3">
-                                    <img src="/images/마시로x타비.jpg" class="musicbanner" style="scale: 1.1;">
-                                </div>
-                                <div class="musictitle">
-                                    <span class="musictext">사랑하고 있는거야 『夏代孝明』 Cover</span>
-                                    <p class="musictextp">Neneko Mashiro & Arahashi Tabi</p>
                                 </div>
                             </div>
                         </div>
@@ -794,21 +223,24 @@
             <div class="foot">
                 <div class="snstext">
                     <div class="footstar">
-                        <img src="/images/발바닥별.png" style="scale: 1.1;">
+                        <img src="https://stellive.me/files/attach/images/main/main_star2.png" style="scale: 1.1;">
                     </div>
                     <div class="footstellive">
-                        <img src="/images/발바닥스텔라이브.png" style="scale: 1.1;">
+                        <img src="https://stellive.me/files/attach/images/main/sec2_txt1.png" style="scale: 1.1;">
                     </div>
                     <div>
-                        <img src="/images/발바닥오피셜sns.png" style="scale: 1.1;">
+                        <img src="https://stellive.me/files/attach/images/main/sec2_txt2.png" style="scale: 1.1;">
                     </div>
                     <div class="footline">
                     </div>
                 </div>
                 <div class="stellivesns">
-                    <img src="/images/twitter.png" class="stllsns" style="scale: 1.1;">
-                    <img src="images/navercafe.png" class="stllsns" style="scale: 1.1;">
-                    <img src="/images/youtube.png" class="stllsns" style="scale: 1.1;">
+                    <img src="https://stellive.me/files/attach/images/icon/sec2_icon1.png" class="stllsns"
+                        style="scale: 1.1;">
+                    <img src="https://stellive.me/files/attach/images/icon/sec2_icon2.png" class="stllsns"
+                        style="scale: 1.1;">
+                    <img src="https://stellive.me/files/attach/images/icon/sec2_icon3.png" class="stllsns"
+                        style="scale: 1.1;">
                 </div>
             </div>
         </footer>
